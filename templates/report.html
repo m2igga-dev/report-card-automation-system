@@ -1,0 +1,16 @@
+<h1>Student Report Card</h1>
+<p><strong>Name:</strong> {{ name }}</p>
+<p><strong>Position:</strong> {{ position }}</p>
+<p><strong>Cumulative Average:</strong> {{ average }}</p>
+<table border="1">
+<tr><th>Subject</th><th>CA</th><th>Exam</th><th>Total</th><th>Grade</th></tr>
+{% for s in subjects %}
+<tr>
+<td>{{ s.subject }}</td>
+<td>{{ s.CA }}</td>
+<td>{{ s.exam }}</td>
+<td>{{ s.total }}</td>
+<td>{{ s.grade }}</td>
+</tr>
+{% endfor %}
+</table>
